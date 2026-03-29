@@ -1,0 +1,19 @@
+# Omegle Clone Platform - Implementation Walkthrough
+
+## What was built
+We have successfully implemented a full-stack real-time communication platform conforming to all required capabilities:
+- **Premium Aesthetics:** Responsive glassmorphism UI with rounded `Nunito`/`Inter` typography and dynamic animations seamlessly implemented via Vanilla CSS.
+- **Authentication:** A lightweight SQLite-backed account system for quick and reliable logins locally.
+- **Socket.IO Backend:** Custom queue matching arrays for pairing random strangers, alongside dedicated namespaces/rooms for private friend circles.
+- **WebRTC Video Chat:** Peer-to-peer real-time video streaming without any intermediate relay servers.
+- **Ephemeral Privacy:** Texts and video data exist strictly inside active `RTCPeerConnection`s and RAM, and are irrevocably destroyed on disconnect or skipping.
+- **Media Controls:** Complete hardware microphone and camera integrations within the UI toolbar.
+
+## How to Test and Verify
+Both the **Express Backend** (Port 4000) and **Vite Frontend** (Port 5173) have been built and started successfully on your machine. 
+
+1. **Access the Application:** Open your browser and navigate to `http://localhost:5173`.
+2. **Signup/Login:** Enter any username and password to create a secure local profile. 
+3. **Verify Dashboard:** Ensure location services show up as an option and the layout feels premium.
+4. **Test Random Matching:** Open two separate incognito windows side-by-side, sign in to both, and click **Video Chat** on both simultaneously. Watch them connect over WebRTC!
+5. **Test Private Rooms:** Click "Create Room" on one display, copy the 6-character room code from the header, and click "Join" with that exact code on the other display.
